@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <style>
+        .emergency-button {
+            height: 100px;
+            font-size: 1.5rem;
+            transition: all 0.3s;
+        }
+        
+        .emergency-button:hover {
+            transform: scale(1.05);
+        }
+
+        .contact-card {
+            transition: all 0.3s;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .first-aid-card {
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .first-aid-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .offline-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        /* Navigation styles */
+        .nav-card {
+            transition: all 0.3s;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+            height: 90px;
+            justify-content: center;
+        }
+
+        .nav-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
+            border-color: var(--hover-color, #0d6efd);
+        }
+
+        .nav-card.home-card { --hover-color: #0d6efd; }
+        .nav-card.hospital-card { --hover-color: #dc3545; }
+        .nav-card.symptom-card { --hover-color: #198754; }
+        
+        .nav-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .nav-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 0.8rem;
+        }
+
+        /* Fix for tab text color */
+        .nav-tabs .nav-link {
+            color: #fff;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-tabs .nav-link.active {
+            color: #000;
+            background-color: #fff;
+        }
+
+        .nav-tabs .nav-link:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-dark text-white">
+    <!-- Navigation Section -->
+    <div class="container-fluid bg-dark py-4 mb-4">
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-3 col-sm-6">
+                <a href="index.html" class="text-decoration-none">
+                    <div class="card nav-card home-card text-center p-4">
+                        <span class="nav-badge badge bg-primary">Home</span>
+                        <i class="bi bi-house-heart-fill nav-icon text-primary"></i>
+                        <h4 class="text-white mb-2">Home</h4>
+                        <p class="text-white-50 mb-0">Return to main dashboard</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <a href="hospital-locator.html" class="text-decoration-none">
+                    <div class="card nav-card hospital-card text-center p-4">
+                        <span class="nav-badge badge bg-danger">Nearby</span>
+                        <i class="bi bi-hospital-fill nav-icon text-danger"></i>
+                        <h4 class="text-white mb-2">Hospital Locator</h4>
+                        <p class="text-white-50 mb-0">Find nearest medical facilities</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <a href="symptom-checker.html" class="text-decoration-none">
+                    <div class="card nav-card symptom-card text-center p-4">
+                        <span class="nav-badge badge bg-success">Check</span>
+                        <i class="bi bi-clipboard2-pulse-fill nav-icon text-success"></i>
+                        <h4 class="text-white mb-2">Symptom Checker</h4>
+                        <p class="text-white-50 mb-0">Analyze your symptoms</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container py-3">
+        <!-- Header -->
+        <h1 class="text-center mb-5">Emergency Portal</h1>
+
+        <!-- SOS Button -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <button id="sosButton" class="btn btn-danger w-100 emergency-button mb-3">
+                    <i class="bi bi-exclamation-triangle-fill me-2"></i>
+                    Send SOS Alert
+                </button>
+            </div>
+        </div>
+
+        <!-- Main Content Tabs -->
+        <ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="contacts-tab" data-bs-toggle="tab" 
+                        data-bs-target="#contacts" type="button" role="tab">
+                    <i class="bi bi-person-lines-fill me-2"></i>Emergency Contacts
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="firstaid-tab" data-bs-toggle="tab" 
+                        data-bs-target="#firstaid" type="button" role="tab">
+                    <i class="bi bi-bandaid-fill me-2"></i>First Aid Guide
+                </button>
+            </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content" id="myTabContent">
+            <!-- Emergency Contacts Tab -->
+            <div class="tab-pane fade show active" id="contacts" role="tabpanel">
+                <div class="d-flex justify-content-end mb-3">
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addContactModal">
+                        <i class="bi bi-plus-lg me-2"></i>Add Contact
+                    </button>
+                </div>
+                <div id="contactsList" class="row g-4">
+                    <!-- Contacts will be inserted here by JavaScript -->
+                </div>
+            </div>
+
+            <!-- First Aid Tab -->
+            <div class="tab-pane fade" id="firstaid" role="tabpanel">
+                <div class="row g-4" id="firstAidList">
+                    <!-- First aid cards will be inserted here by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Contact Modal -->
+    <div class="modal fade" id="addContactModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add Emergency Contact</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <label class="form-label">Name</label>
+                            <input type="text" class="form-control" id="contactName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="contactPhone" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Relation</label>
+                            <input type="text" class="form-control" id="contactRelation" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="saveContact">Save Contact</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- First Aid Detail Modal -->
+    <div class="modal fade" id="firstAidModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="firstAidModalTitle"></h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="firstAidModalContent">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/emergency-portal.js"></script>
+</body>
+</html>
