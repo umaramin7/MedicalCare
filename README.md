@@ -152,7 +152,7 @@ We welcome healthcare professionals and developers! Here's how to contribute:
 
 | Channel | Details |
 |---------|----------|
-| 📧 **Email** | [umaramin78894@gmail.com](mailto: umaramin78894@gmail.com) |
+| 📧 **Email** | [umaramin78894@gmail.com] |
 
 
 </div>
