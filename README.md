@@ -152,7 +152,7 @@ We welcome healthcare professionals and developers! Here's how to contribute:
 
 | Channel | Details |
 |---------|----------|
-| 📧 **Email** | [vivek27082005@gmail.com](mailto:vivek27082005@gmail.com) |
+| 📧 **Email** | [umaramin78894@gmail.com](mailto: umaramin78894@gmail.com) |
 
 
 </div>
@@ -170,8 +170,8 @@ The information provided by HealthGuardian is for general informational purposes
 
 **Saving Lives Through Technology**
 
-[⬆ Back to Repo](https://github.com/rimuru2725/HealthGuardian)
+[⬆ Back to Repo](https://github.com/umaramin7/HealthGuardian)
 
-<sub>Developed with ❤️ by Vivek | Powered by AI for Emergency Care</sub>
+<sub>Developed with ❤️ by Umar | Powered by AI for Emergency Care</sub>
 
 </div>
