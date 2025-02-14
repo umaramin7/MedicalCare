@@ -1,7 +1,7 @@
 <!-- Animated Header -->
 <div align="center">
 
-# HealthGuardian <img src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/heart-pulse.svg" width="32" height="32" alt="HealthGuardian Logo">
+# MedicalCare <img src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/heart-pulse.svg" width="32" height="32" alt="MedicalCare Logo">
 
 [![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
 [![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)
@@ -15,7 +15,7 @@ _Your AI-Powered Emergency Healthcare Companion_
 
 ## 🌟 Overview
 
-HealthGuardian is your trusted companion in medical emergencies, providing instant access to critical healthcare resources, AI-powered symptom analysis, and real-time emergency assistance. Our platform combines cutting-edge technology with medical expertise to ensure help is always within reach.
+MedicalCare is your trusted companion in medical emergencies, providing instant access to critical healthcare resources, AI-powered symptom analysis, and real-time emergency assistance. Our platform combines cutting-edge technology with medical expertise to ensure help is always within reach.
 
 ## 🚨 Emergency Features
 
