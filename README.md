@@ -48,7 +48,7 @@ graph TD
 ### Hospital Locator System
 <div align="center">
 
-| Feature | Range | Details |
+| Feature | Range | Detail |
 |---------|-------|----------|
 | 🗺️ **Radius Search** | 5km | Real-time hospital availability |
 | 🚗 **Route Planning** | Dynamic | Traffic-aware pathfinding |
