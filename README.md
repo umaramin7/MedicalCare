@@ -170,7 +170,7 @@ The information provided by HealthGuardian is for general informational purposes
 
 **Saving Lives Through Technology**
 
-[⬆ Back to Repo](https://github.com/umaramin7/HealthGuardian)
+[⬆ Back to Repo](https://github.com/umaramin7/MedicalCare)
 
 <sub>Developed with ❤️ by Umar | Powered by AI for Emergency Care</sub>
 
